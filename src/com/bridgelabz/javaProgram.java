@@ -3,30 +3,20 @@ import java.util.Scanner;
 
 public class javaProgram {
 
-    public static void findFactor(int n) {
-        for(int i=1; i <= n; i++) {
-            if(n % i == 0)
-                System.out.print(i+"\t");
-        }
-    }
-
     public static void main(String[] args) {
 
-        // declare variable
-        int number = 0;
-
-        // create Scanner class object
-        Scanner scan = new Scanner(System.in);
-
-        // take input
-        System.out.print("Enter a number:: ");
-        number = scan.nextInt();
-
-        System.out.print("The factors are:: ");
-        findFactor(number);
-
-        scan.close();
+        System.out.println("Enter the value of num1 and num2");
+        Scanner sc = new Scanner(System.in);
+        int num1 = sc.nextInt();
+        int num2 = sc.nextInt();
+        int quotient = 0, remainder = 0;
 
 
+        quotient = num1 / num2;
+
+        remainder = num1 % num2;
+
+        System.out.println("Quotient when " + num1 + "/" + num2 + " is: " + quotient);
+        System.out.println("Remainder when " + num1 + " is divided by " + num2 + " is: " + remainder);
     }
 }
