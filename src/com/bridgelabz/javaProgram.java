@@ -5,21 +5,60 @@ public class javaProgram {
 
     public static void main(String[] args) {
 
-        int a, b, c, largest, temp;
-        //object of the Scanner class
         Scanner sc = new Scanner(System.in);
-        //reading input from the user
-        System.out.println("Enter the first number:");
-        a = sc.nextInt();
-        System.out.println("Enter the second number:");
-        b = sc.nextInt();
-        System.out.println("Enter the third number:");
-        c = sc.nextInt();
-        //comparing a and b and storing the largest number in a temp variable
-        temp=a>b?a:b;
-        //comparing the temp variable with c and storing the result in the variable
-        largest=c>temp?c:temp;
-        //prints the largest number
-        System.out.println("The largest number is: "+largest);
+
+        System.out.println("Enter the rows");
+        int n = sc.nextInt();
+        System.out.println("Enter the columns");
+        int m = sc.nextInt();
+        System.out.println("Cases for 2D Array ....");
+        System.out.println("1  ==>> Integer");
+        System.out.println("2  ==>> Double");
+        System.out.println("3  ==>> Boolean");
+        int cas = sc.nextInt();
+        switch(cas){
+            case 1:
+                int arr[][] = new int[n][m];
+                for(int i=0;i<n;i++){
+                    for(int j=0;j<m;j++){
+                        arr[i][j] = sc.nextInt();
+                    }
+                }
+                for(int i=0;i<n;i++){
+                    for(int j=0;j<m;j++){
+                        System.out.print(" "+arr[i][j]);
+                    }
+                    System.out.println(" ");
+                }
+            case 2:
+                double arrD[][] = new double[n][m];
+                for(int i=0;i<n;i++){
+                    for(int j=0;j<m;j++){
+                        arrD[i][j] = sc.nextInt();
+                    }
+                }
+                for(int i=0;i<n;i++){
+                    for(int j=0;j<m;j++){
+                        System.out.print(" "+arrD[i][j]);
+                    }
+                    System.out.println(" ");
+                }
+
+            case 3:
+                boolean arrB[][] = new boolean[n][m];
+                for(int i=0;i<n;i++){
+                    for(int j=0;j<m;j++){
+                        arrB[i][j] = sc.nextBoolean();
+                    }
+                }
+                for(int i=0;i<n;i++){
+                    for(int j=0;j<m;j++){
+                        System.out.print(" "+arrB[i][j]);
+                    }
+                    System.out.println(" ");
+                }
+            default :
+                System.out.println("INVALID");
+        }
     }
 }
